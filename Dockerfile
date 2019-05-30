@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Justin Menga <justin.menga@gmail.com>
+MAINTAINER Santosh Rai <santosh.rai.acquis@gmail.com>
 
 # Prevent dpkg errors
 ENV TERM=xterm-256color
@@ -10,7 +10,7 @@ ENV TERM=xterm-256color
 # Install node.js
 RUN apt-get update && \
     apt-get install curl git -y && \
-    curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - && \
+    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && \
     apt-get install -y nodejs 
 
 ADD . /app
